@@ -3,31 +3,370 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>EMSD Consulting - Electrical & Mechanical Engineering Services</title>
+    <meta name="description" content="Professional electrical and mechanical engineering consulting services. Expert solutions for your engineering challenges.">
     <link rel="stylesheet" href="./style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav class="nav-bar">
-            <div class="nav-bar-EMSD-Logo">
-                <a id="EMSD_Logo" href="#">
-                    <img src="./branding_tc.png" alt="EMSD_Logo" />
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">
+                    <span class="logo-text">EMSD</span>
+                    <span class="logo-subtitle">Consulting</span>
                 </a>
             </div>
-            <div>
-                <div class="nav-bar-font-options">
-                    <a class="nav-bar-font" lang="zh-HK" href="/tc/">繁</a>
-                    <a class="nav-bar-font" lang="zh-HK" href="/sc/">简</a>
-                    <a class="nav-bar-font" lang="en" href="/en/">EN</a>
-                    <a class="nav-bar-font" href="#font">
-                        <img src="./font-size.png" alt="font-size" />
-                    </a>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#news" class="nav-link">News</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Expert Electrical & Mechanical Engineering Solutions</h1>
+                <p class="hero-subtitle">Delivering innovative consulting services for complex engineering challenges with precision and expertise</p>
+                <div class="hero-buttons">
+                    <a href="#services" class="btn btn-primary">Our Services</a>
+                    <a href="#contact" class="btn btn-secondary">Get Started</a>
                 </div>
-                <a id="BrandHK_Logo" href="https://www.brandhk.gov.hk/zh-hk/%E4%B8%BB%E9%A0%81">
-                    <img src="https://www.brandhk.gov.hk/BHK_Logo/en/logo1.svg" alt="BrandHK_Logo" />
-                </a>
             </div>
-        </nav>
-    </header>
+            <div class="hero-image">
+                <div class="hero-placeholder">
+                    <svg width="100%" height="100%" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="600" height="400" fill="#f8f9fa"/>
+                        <path d="M200 150h200v100H200z" fill="#e9ecef"/>
+                        <circle cx="300" cy="200" r="30" fill="#6c757d"/>
+                        <text x="300" y="330" text-anchor="middle" fill="#6c757d" font-size="14">Engineering Solutions</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">Comprehensive engineering consulting solutions tailored to your needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 4L6 16v16l18 12 18-12V16L24 4z" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <path d="M24 4v40" stroke="currentColor" stroke-width="2"/>
+                            <path d="M6 16l18 12 18-12" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Electrical Engineering</h3>
+                    <p class="service-description">Power systems design, electrical infrastructure planning, and automation solutions for commercial and industrial projects.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <path d="M24 8v32" stroke="currentColor" stroke-width="2"/>
+                            <path d="M8 24h32" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="24" cy="24" r="4" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Mechanical Engineering</h3>
+                    <p class="service-description">HVAC systems, mechanical design, thermal analysis, and building services engineering for optimal performance.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="8" y="8" width="32" height="32" rx="2" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <path d="M16 20h16" stroke="currentColor" stroke-width="2"/>
+                            <path d="M16 28h16" stroke="currentColor" stroke-width="2"/>
+                            <path d="M16 36h8" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Project Consulting</h3>
+                    <p class="service-description">Complete project management, technical documentation, compliance review, and quality assurance services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2 class="section-title">About EMSD Consulting</h2>
+                    <p class="about-text">With over two decades of experience in electrical and mechanical engineering, EMSD Consulting delivers innovative solutions for complex engineering challenges. Our team of certified professionals combines technical expertise with industry best practices to ensure project success.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3 class="stat-number">20+</h3>
+                            <p class="stat-label">Years Experience</p>
+                        </div>
+                        <div class="stat">
+                            <h3 class="stat-number">500+</h3>
+                            <p class="stat-label">Projects Completed</p>
+                        </div>
+                        <div class="stat">
+                            <h3 class="stat-number">50+</h3>
+                            <p class="stat-label">Expert Engineers</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-placeholder">
+                        <svg width="100%" height="100%" viewBox="0 0 500 350" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="500" height="350" fill="#f8f9fa"/>
+                            <rect x="50" y="50" width="400" height="250" fill="#e9ecef"/>
+                            <circle cx="250" cy="175" r="40" fill="#6c757d"/>
+                            <text x="250" y="320" text-anchor="middle" fill="#6c757d" font-size="14">Our Team</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="news">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Latest News</h2>
+                <p class="section-subtitle">Stay updated with industry trends and company announcements</p>
+            </div>
+            <div class="news-grid">
+                <article class="news-card">
+                    <div class="news-image">
+                        <svg width="100%" height="200" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="400" height="200" fill="#f8f9fa"/>
+                            <rect x="50" y="50" width="300" height="100" fill="#e9ecef"/>
+                            <circle cx="200" cy="100" r="25" fill="#6c757d"/>
+                        </svg>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">March 15, 2024</div>
+                        <h3 class="news-title">New Sustainable Energy Solutions</h3>
+                        <p class="news-excerpt">Our latest project focuses on implementing renewable energy systems for commercial buildings, reducing carbon footprint by 40%.</p>
+                        <a href="#" class="news-link">Read More</a>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-image">
+                        <svg width="100%" height="200" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="400" height="200" fill="#f8f9fa"/>
+                            <rect x="50" y="50" width="300" height="100" fill="#e9ecef"/>
+                            <circle cx="200" cy="100" r="25" fill="#6c757d"/>
+                        </svg>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">March 10, 2024</div>
+                        <h3 class="news-title">Advanced HVAC Technology</h3>
+                        <p class="news-excerpt">Introducing smart HVAC systems that optimize energy efficiency while maintaining perfect climate control for large-scale facilities.</p>
+                        <a href="#" class="news-link">Read More</a>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-image">
+                        <svg width="100%" height="200" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="400" height="200" fill="#f8f9fa"/>
+                            <rect x="50" y="50" width="300" height="100" fill="#e9ecef"/>
+                            <circle cx="200" cy="100" r="25" fill="#6c757d"/>
+                        </svg>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">March 5, 2024</div>
+                        <h3 class="news-title">Industry Award Recognition</h3>
+                        <p class="news-excerpt">EMSD Consulting receives the Excellence in Engineering Award for our innovative approach to electrical infrastructure design.</p>
+                        <a href="#" class="news-link">Read More</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2 class="section-title">Get in Touch</h2>
+                    <p class="contact-text">Ready to discuss your engineering project? Our team is here to help you find the perfect solution.</p>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2" fill="none"/>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Address</h4>
+                                <p>123 Engineering Plaza<br>Tech District, City 12345</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="2" fill="none"/>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Phone</h4>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" fill="none"/>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p>info@emsdconsulting.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Interest</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service</option>
+                                <option value="electrical">Electrical Engineering</option>
+                                <option value="mechanical">Mechanical Engineering</option>
+                                <option value="consulting">Project Consulting</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>EMSD Consulting</h3>
+                    <p>Professional electrical and mechanical engineering consulting services for innovative solutions.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Electrical Engineering</a></li>
+                        <li><a href="#services">Mechanical Engineering</a></li>
+                        <li><a href="#services">Project Consulting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#news">News</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                        <a href="#" aria-label="Twitter">Twitter</a>
+                        <a href="#" aria-label="Facebook">Facebook</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 EMSD Consulting. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+        
+        mobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('is-active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Contact form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+
+        // Add active class to navigation links on scroll
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
