@@ -1,0 +1,37 @@
+*, html, body {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-bar-EMSD-Logo {
+    object-fit: cover;
+}
+
+.nav-bar-font-options {
+    display: inline-block;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.nav-bar-font {
+    display: inline-block;
+    height: auto;
+    width: 1rem;
+    text-decoration: none;
+    color: black;
+}
+
+.nav-bar-font > img {
+    display: inline-block;
+    height: auto;
+    width: 1rem;
+    text-decoration: none;
+    color: black;
+}
