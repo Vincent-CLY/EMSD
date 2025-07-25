@@ -12,17 +12,26 @@
 <body>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
+        <a class="logo" href="index.html"><img src="images/logo-emsd.png" alt="EMSD Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline'"><span class="logo-text" style="display: none;">EMSD</span></a>
         <div class="nav-container">
-            <div class="nav-logo">
-                <span class="logo-text">TechDominion</span>
+            <div>
+                <ul>
+                    <li><a href="" aria-label="Language"><img class="icon" src="images/icon/language.webp" alt="Language" onerror="this.innerHTML='🌐'"></a></li>
+                    <li><a href="" aria-label="Text Size"><img class="icon" src="images/icon/textsize.webp" alt="Text Size" onerror="this.innerHTML='Aa'"></a></li>
+                    <li><a href="" aria-label="Share"><img class="icon" src="images/icon/share.webp" alt="Share" onerror="this.innerHTML='📤'"></a></li>
+                    <li><a href="" aria-label="Mail"><img class="icon" src="images/icon/mail.webp" alt="Mail" onerror="this.innerHTML='✉️'"></a></li>
+                    <li><a href="" aria-label="Search"><img class="icon" src="images/icon/search.webp" alt="Search" onerror="this.innerHTML='🔍'"></a></li>
+                </ul>
             </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#news" class="nav-link">News</a></li>
-                <li><a href="#work" class="nav-link">Work</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="https://rpobooking.emsd.gov.hk/?lang=en">Appointments (RPO)</a></li>
+                    <li><a href="https://www.search.gov.hk/result?ui_lang=en&proxystylesheet=home_adv_frontend&output=xml_no_dtd&ui_charset=utf-8&a_submit=false&query=emsd&ie=UTF-8&oe=UTF-8&site=default_collection&tpl_id=OSP&gp=0&gp0=default_collection&gp1=&p_size=10&num=10&doc_type=all&as_filetype=&as_q=&as_epq=&is_epq=&as_oq=&is_oq=&as_eq=&is_eq=&r_lang=&lr=&web=this&sw=1&txtonly=0&rwd=0&date_v=%23-1&date_last=%23-1&s_date_year=2025&s_date_month=01&s_date_day=01&e_date_year=2025&e_date_month=07&e_date_day=09&last_mod=&sort=date%3AD%3AL%3Ad1&tab=online">Public Forms</a></li>
+                    <li><a href="">E-Submissions</a></li>
+                    <li><a href="">Access to Information</a></li>
+                </ul>
+            </div>
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -30,6 +39,18 @@
             </div>
         </div>
     </nav>
+
+    <!-- Side Navigation Bar -->
+    <aside id="sidebar" class="sidebar">
+        <ul class="list-group">
+            <li><a class="list-group-item" href="#News" aria-label="Latest News">Latest News</a></li>
+            <li><a class="list-group-item" href="#Publications" aria-label="Publications & Press Releases">Publications</a></li>
+            <li><a class="list-group-item" href="#Regulation" aria-label="Regulation Services">Regulation</a></li>
+            <li><a class="list-group-item" href="#Engineering" aria-label="Engineering Services">Engineering</a></li>
+            <li><a class="list-group-item" href="#Initiatives" aria-label="Supporting Government Initiatives">Initiatives</a></li>
+            <li><a class="list-group-item" href="#Links" aria-label="Useful Websites">Links</a></li>
+        </ul>
+    </aside>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
