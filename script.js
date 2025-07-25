@@ -73,15 +73,57 @@ setTimeout(typeText, 1000);
 // Particles animation
 function createParticles() {
     const particlesContainer = document.getElementById('particles');
-    const particleCount = 50;
+    const particleCount = 80; // Increased for more visual impact
+    const particleTypes = ['', 'square', 'diamond', 'line', 'glow']; // Different particle types
     
     for (let i = 0; i < particleCount; i++) {
         const particle = document.createElement('div');
         particle.classList.add('particle');
+        
+        // Randomly assign particle types for variety
+        const randomType = particleTypes[Math.floor(Math.random() * particleTypes.length)];
+        if (randomType) {
+            particle.classList.add(randomType);
+        }
+        
+        // Random positioning and timing
         particle.style.left = Math.random() * 100 + '%';
-        particle.style.animationDelay = Math.random() * 6 + 's';
-        particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
+        particle.style.animationDelay = Math.random() * 8 + 's';
+        particle.style.animationDuration = (Math.random() * 4 + 4) + 's';
+        
+        // Add some size variation for regular particles
+        if (!randomType || randomType === '') {
+            const size = Math.random() * 3 + 2; // 2px to 5px
+            particle.style.width = size + 'px';
+            particle.style.height = size + 'px';
+        }
+        
         particlesContainer.appendChild(particle);
+    }
+    
+    // Add some special floating tech elements
+    createTechElements();
+}
+
+// Create special tech-themed floating elements
+function createTechElements() {
+    const particlesContainer = document.getElementById('particles');
+    const techElementCount = 5;
+    
+    for (let i = 0; i < techElementCount; i++) {
+        const techElement = document.createElement('div');
+        techElement.classList.add('particle', 'tech-element');
+        
+        // Create different tech shapes
+        const shapes = ['circuit', 'chip', 'signal', 'grid'];
+        const shape = shapes[Math.floor(Math.random() * shapes.length)];
+        techElement.classList.add(shape);
+        
+        techElement.style.left = Math.random() * 100 + '%';
+        techElement.style.animationDelay = Math.random() * 10 + 's';
+        techElement.style.animationDuration = (Math.random() * 6 + 8) + 's';
+        
+        particlesContainer.appendChild(techElement);
     }
 }
 
