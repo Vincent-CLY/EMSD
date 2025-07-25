@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News - TechnovateX</title>
+    <meta name="description" content="Stay updated with the latest technology news, innovations, and breakthroughs from TechnovateX.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-text">TechnovateX</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#technologies" class="nav-link">Technologies</a>
+                <a href="news.html" class="nav-link active">News</a>
+                <a href="index.html#portfolio" class="nav-link">Portfolio</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb Navigation -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="index.html">Home</a>
+                <span class="breadcrumb-separator">→</span>
+                <span class="breadcrumb-current">News</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- News Header -->
+    <section class="news-header">
+        <div class="container">
+            <div class="news-header-content">
+                <h1>Technology News</h1>
+                <p>Stay informed with the latest breakthroughs, innovations, and industry insights from the world of technology.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Filters and Search -->
+    <section class="news-controls">
+        <div class="container">
+            <div class="news-controls-grid">
+                <!-- Search Bar -->
+                <div class="news-search">
+                    <div class="search-container">
+                        <input type="text" id="news-search" placeholder="Search articles..." aria-label="Search news articles">
+                        <button class="search-btn" id="search-btn">
+                            <span class="search-icon">🔍</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Category Filter -->
+                <div class="news-filter">
+                    <label for="category-filter">Category:</label>
+                    <select id="category-filter" aria-label="Filter by category">
+                        <option value="all">All Categories</option>
+                        <option value="ai-innovation">AI Innovation</option>
+                        <option value="iot-solutions">IoT Solutions</option>
+                        <option value="robotics">Robotics</option>
+                        <option value="quantum-computing">Quantum Computing</option>
+                        <option value="mobile-innovation">Mobile Innovation</option>
+                        <option value="cybersecurity">Cybersecurity</option>
+                    </select>
+                </div>
+
+                <!-- Date Filter -->
+                <div class="news-filter">
+                    <label for="date-filter">Date Range:</label>
+                    <select id="date-filter" aria-label="Filter by date">
+                        <option value="all">All Time</option>
+                        <option value="today">Today</option>
+                        <option value="week">This Week</option>
+                        <option value="month">This Month</option>
+                        <option value="quarter">This Quarter</option>
+                    </select>
+                </div>
+
+                <!-- View Toggle -->
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="grid" aria-label="Grid view">
+                        <span class="view-icon">⊞</span>
+                    </button>
+                    <button class="view-btn" data-view="list" aria-label="List view">
+                        <span class="view-icon">☰</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Active Filters Display -->
+            <div class="active-filters" id="active-filters" style="display: none;">
+                <span class="filters-label">Active Filters:</span>
+                <div class="filter-tags" id="filter-tags"></div>
+                <button class="clear-filters" id="clear-filters">Clear All</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Content -->
+    <section class="news-content">
+        <div class="container">
+            <!-- Loading State -->
+            <div class="loading-state" id="loading-state" style="display: none;">
+                <div class="loading-spinner"></div>
+                <p>Loading articles...</p>
+            </div>
+
+            <!-- News Results Info -->
+            <div class="news-results-info" id="news-results-info">
+                <span class="results-count" id="results-count">Loading articles...</span>
+                <div class="sort-options">
+                    <label for="sort-select">Sort by:</label>
+                    <select id="sort-select" aria-label="Sort articles">
+                        <option value="date-desc">Newest First</option>
+                        <option value="date-asc">Oldest First</option>
+                        <option value="title-asc">Title A-Z</option>
+                        <option value="title-desc">Title Z-A</option>
+                        <option value="category">Category</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- News Grid -->
+            <div class="news-grid-container">
+                <div class="news-grid" id="news-grid">
+                    <!-- News articles will be dynamically loaded here -->
+                </div>
+            </div>
+
+            <!-- No Results Message -->
+            <div class="no-results" id="no-results" style="display: none;">
+                <div class="no-results-content">
+                    <span class="no-results-icon">📰</span>
+                    <h3>No articles found</h3>
+                    <p>Try adjusting your search criteria or filters to find more articles.</p>
+                    <button class="btn btn-primary" onclick="clearAllFilters()">Clear Filters</button>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination-container" id="pagination-container">
+                <div class="pagination" id="pagination">
+                    <!-- Pagination will be dynamically generated -->
+                </div>
+                <div class="pagination-info">
+                    <span id="pagination-info">Page 1 of 1</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h3>Stay Updated</h3>
+                <p>Get the latest technology news delivered directly to your inbox</p>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>TechnovateX</h4>
+                    <p>Innovating tomorrow's technology today.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">GitHub</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Solutions</h4>
+                    <a href="#">Artificial Intelligence</a>
+                    <a href="#">IoT Platforms</a>
+                    <a href="#">Quantum Computing</a>
+                    <a href="#">Cybersecurity</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <a href="index.html#about">About Us</a>
+                    <a href="index.html#portfolio">Portfolio</a>
+                    <a href="news.html">News</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <a href="#">Documentation</a>
+                    <a href="#">API Reference</a>
+                    <a href="#">Support</a>
+                    <a href="#">Blog</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechnovateX. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Additional CSS for News Page -->
+    <style>
+        /* News Page Specific Styles */
+        .breadcrumb {
+            background-color: var(--accent-color);
+            padding: var(--spacing-lg) 0;
+            margin-top: 70px;
+        }
+
+        .breadcrumb-nav {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            font-size: var(--font-size-sm);
+        }
+
+        .breadcrumb-nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .breadcrumb-separator {
+            color: var(--text-secondary);
+        }
+
+        .breadcrumb-current {
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .news-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: var(--text-light);
+            padding: var(--spacing-3xl) 0;
+            text-align: center;
+        }
+
+        .news-header h1 {
+            color: var(--text-light);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .news-header p {
+            font-size: var(--font-size-lg);
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .news-controls {
+            background-color: var(--secondary-color);
+            padding: var(--spacing-2xl) 0;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 70px;
+            z-index: 100;
+        }
+
+        .news-controls-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr auto;
+            gap: var(--spacing-lg);
+            align-items: end;
+        }
+
+        .search-container {
+            position: relative;
+            display: flex;
+        }
+
+        .search-container input {
+            flex: 1;
+            padding: var(--spacing-md);
+            border: 2px solid var(--border-color);
+            border-radius: var(--border-radius) 0 0 var(--border-radius);
+            font-size: var(--font-size-base);
+            transition: var(--transition);
+        }
+
+        .search-container input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .search-btn {
+            padding: var(--spacing-md);
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            border: none;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .search-btn:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .news-filter {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-sm);
+        }
+
+        .news-filter label {
+            font-size: var(--font-size-sm);
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .news-filter select {
+            padding: var(--spacing-md);
+            border: 2px solid var(--border-color);
+            border-radius: var(--border-radius);
+            font-size: var(--font-size-base);
+            background-color: var(--secondary-color);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .news-filter select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .view-toggle {
+            display: flex;
+            gap: var(--spacing-xs);
+        }
+
+        .view-btn {
+            padding: var(--spacing-md);
+            border: 2px solid var(--border-color);
+            background-color: var(--secondary-color);
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: var(--font-size-lg);
+        }
+
+        .view-btn:first-child {
+            border-radius: var(--border-radius) 0 0 var(--border-radius);
+        }
+
+        .view-btn:last-child {
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+
+        .view-btn.active {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            border-color: var(--primary-color);
+        }
+
+        .active-filters {
+            margin-top: var(--spacing-lg);
+            padding-top: var(--spacing-lg);
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+            flex-wrap: wrap;
+        }
+
+        .filters-label {
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .filter-tags {
+            display: flex;
+            gap: var(--spacing-sm);
+            flex-wrap: wrap;
+        }
+
+        .filter-tag {
+            background-color: var(--primary-light);
+            color: var(--primary-color);
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: 12px;
+            font-size: var(--font-size-sm);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+        }
+
+        .filter-tag-remove {
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .clear-filters {
+            background: none;
+            border: none;
+            color: var(--primary-color);
+            cursor: pointer;
+            font-weight: 500;
+            text-decoration: underline;
+        }
+
+        .news-content {
+            padding: var(--spacing-2xl) 0;
+        }
+
+        .loading-state {
+            text-align: center;
+            padding: var(--spacing-3xl) 0;
+        }
+
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid var(--border-color);
+            border-top: 4px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto var(--spacing-lg);
+        }
+
+        .news-results-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--spacing-xl);
+            padding-bottom: var(--spacing-md);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .results-count {
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .sort-options {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+
+        .sort-options label {
+            font-size: var(--font-size-sm);
+            color: var(--text-secondary);
+        }
+
+        .sort-options select {
+            padding: var(--spacing-sm) var(--spacing-md);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            font-size: var(--font-size-sm);
+        }
+
+        .news-grid-container {
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: var(--spacing-xl);
+            transition: var(--transition);
+        }
+
+        .news-grid.list-view {
+            grid-template-columns: 1fr;
+        }
+
+        .news-grid.list-view .news-card {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: var(--spacing-lg);
+            align-items: start;
+        }
+
+        .news-grid.list-view .news-image {
+            height: 120px;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: var(--spacing-3xl) 0;
+        }
+
+        .no-results-content {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .no-results-icon {
+            font-size: 4rem;
+            display: block;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .pagination-container {
+            margin-top: var(--spacing-2xl);
+            padding-top: var(--spacing-xl);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .pagination-btn {
+            padding: var(--spacing-sm) var(--spacing-md);
+            border: 1px solid var(--border-color);
+            background-color: var(--secondary-color);
+            color: var(--text-primary);
+            cursor: pointer;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .pagination-btn:hover {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            border-color: var(--primary-color);
+        }
+
+        .pagination-btn.active {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            border-color: var(--primary-color);
+        }
+
+        .pagination-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .pagination-info {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: var(--font-size-sm);
+        }
+
+        /* Responsive Design for News Page */
+        @media (max-width: 768px) {
+            .news-controls-grid {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-md);
+            }
+
+            .view-toggle {
+                justify-content: center;
+            }
+
+            .news-results-info {
+                flex-direction: column;
+                gap: var(--spacing-md);
+                align-items: stretch;
+            }
+
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .news-grid.list-view .news-card {
+                grid-template-columns: 1fr;
+            }
+
+            .pagination {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+
+    <script src="script.js"></script>
+    <script src="news.js"></script>
+</body>
+</html>

@@ -3,31 +3,353 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css" />
+    <title>TechnovateX - Advanced Technology Solutions</title>
+    <meta name="description" content="Leading technology company specializing in AI, IoT, Robotics, and Quantum Computing solutions for the future.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
 </head>
 <body>
-    <header>
-        <nav class="nav-bar">
-            <div class="nav-bar-EMSD-Logo">
-                <a id="EMSD_Logo" href="#">
-                    <img src="./branding_tc.png" alt="EMSD_Logo" />
-                </a>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">TechnovateX</span>
             </div>
-            <div>
-                <div class="nav-bar-font-options">
-                    <a class="nav-bar-font" lang="zh-HK" href="/tc/">繁</a>
-                    <a class="nav-bar-font" lang="zh-HK" href="/sc/">简</a>
-                    <a class="nav-bar-font" lang="en" href="/en/">EN</a>
-                    <a class="nav-bar-font" href="#font">
-                        <img src="./font-size.png" alt="font-size" />
-                    </a>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#technologies" class="nav-link">Technologies</a>
+                <a href="news.html" class="nav-link">News</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-main">Innovating Tomorrow's</span>
+                    <span class="title-typing" id="typing-text">Technology</span>
+                </h1>
+                <p class="hero-description">
+                    Leading the future with cutting-edge solutions in AI, IoT, Robotics, and Quantum Computing. 
+                    We transform ideas into revolutionary technologies that shape the world.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('about')">
+                        Discover Our Vision
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('portfolio')">
+                        View Our Work
+                    </button>
                 </div>
-                <a id="BrandHK_Logo" href="https://www.brandhk.gov.hk/zh-hk/%E4%B8%BB%E9%A0%81">
-                    <img src="https://www.brandhk.gov.hk/BHK_Logo/en/logo1.svg" alt="BrandHK_Logo" />
-                </a>
             </div>
-        </nav>
-    </header>
+            <div class="hero-visual">
+                <div class="hero-animation">
+                    <div class="floating-element" style="--delay: 0s;">🚀</div>
+                    <div class="floating-element" style="--delay: 0.5s;">🤖</div>
+                    <div class="floating-element" style="--delay: 1s;">⚡</div>
+                    <div class="floating-element" style="--delay: 1.5s;">🔬</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About TechnovateX</h2>
+                <p class="section-subtitle">Pioneering the future through innovative technology solutions</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Our Mission</h3>
+                    <p>
+                        We are dedicated to developing groundbreaking technologies that solve real-world challenges. 
+                        Our team of world-class engineers and researchers work tirelessly to push the boundaries 
+                        of what's possible in artificial intelligence, quantum computing, and advanced robotics.
+                    </p>
+                    <h3>Our Vision</h3>
+                    <p>
+                        To be the global leader in technological innovation, creating solutions that enhance human 
+                        capabilities and drive sustainable progress for generations to come.
+                    </p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="500">0</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="150">0</span>
+                        <span class="stat-label">Expert Engineers</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="98">0</span>
+                        <span class="stat-label">Client Satisfaction</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="25">0</span>
+                        <span class="stat-label">Countries Served</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section id="technologies" class="technologies">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Technologies</h2>
+                <p class="section-subtitle">Cutting-edge solutions across multiple domains</p>
+            </div>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="tech-icon">🤖</div>
+                    <h3>Artificial Intelligence</h3>
+                    <p>Advanced machine learning algorithms and neural networks that power intelligent decision-making systems.</p>
+                    <ul class="tech-features">
+                        <li>Natural Language Processing</li>
+                        <li>Computer Vision</li>
+                        <li>Deep Learning Models</li>
+                    </ul>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">🌐</div>
+                    <h3>IoT Solutions</h3>
+                    <p>Connected device ecosystems that enable smart automation and real-time data analytics.</p>
+                    <ul class="tech-features">
+                        <li>Smart City Infrastructure</li>
+                        <li>Industrial IoT</li>
+                        <li>Edge Computing</li>
+                    </ul>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">⚡</div>
+                    <h3>Quantum Computing</h3>
+                    <p>Revolutionary quantum algorithms solving complex computational challenges at unprecedented speeds.</p>
+                    <ul class="tech-features">
+                        <li>Quantum Algorithms</li>
+                        <li>Cryptography Solutions</li>
+                        <li>Optimization Problems</li>
+                    </ul>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">🔒</div>
+                    <h3>Cybersecurity</h3>
+                    <p>Next-generation security frameworks protecting digital assets and ensuring data integrity.</p>
+                    <ul class="tech-features">
+                        <li>Zero Trust Architecture</li>
+                        <li>AI-Powered Threat Detection</li>
+                        <li>Blockchain Security</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Preview Section -->
+    <section id="news-preview" class="news-preview">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Latest News</h2>
+                <p class="section-subtitle">Stay updated with our latest innovations and breakthroughs</p>
+            </div>
+            <div class="news-grid" id="news-preview-grid">
+                <!-- News items will be loaded dynamically -->
+            </div>
+            <div class="news-cta">
+                <a href="news.html" class="btn btn-primary">View All News</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Portfolio</h2>
+                <p class="section-subtitle">Showcasing our most impactful projects and solutions</p>
+            </div>
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="ai">AI & ML</button>
+                <button class="filter-btn" data-filter="iot">IoT</button>
+                <button class="filter-btn" data-filter="quantum">Quantum</button>
+                <button class="filter-btn" data-filter="robotics">Robotics</button>
+            </div>
+            <div class="portfolio-grid" id="portfolio-grid">
+                <div class="portfolio-item" data-category="ai">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">🧠</div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>NeuroVision AI</h3>
+                        <p>Advanced computer vision system for medical diagnostics</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">AI</span>
+                            <span class="tag">Healthcare</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="iot">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">🏙️</div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Smart City Platform</h3>
+                        <p>Comprehensive IoT solution for urban management</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">IoT</span>
+                            <span class="tag">Smart City</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="quantum">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">⚛️</div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Quantum Optimizer</h3>
+                        <p>Quantum computing solution for complex optimization</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Quantum</span>
+                            <span class="tag">Optimization</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="robotics">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">🤖</div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Autonomous Robotics</h3>
+                        <p>Self-navigating robots for industrial automation</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Robotics</span>
+                            <span class="tag">Automation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Ready to transform your ideas into reality?</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <span>hello@technovatex.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📱</span>
+                        <span>+1 (555) 123-4567</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <span>123 Innovation Drive, Tech Valley, CA 94043</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">GitHub</a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h3>Stay Updated</h3>
+                <p>Get the latest news and insights delivered to your inbox</p>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>TechnovateX</h4>
+                    <p>Innovating tomorrow's technology today.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">GitHub</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Solutions</h4>
+                    <a href="#">Artificial Intelligence</a>
+                    <a href="#">IoT Platforms</a>
+                    <a href="#">Quantum Computing</a>
+                    <a href="#">Cybersecurity</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <a href="#about">About Us</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="news.html">News</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <a href="#">Documentation</a>
+                    <a href="#">API Reference</a>
+                    <a href="#">Support</a>
+                    <a href="#">Blog</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechnovateX. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="article-title">Article - TechnovateX</title>
+    <meta name="description" content="Read the latest technology news and insights from TechnovateX.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+    
+    <!-- Open Graph meta tags for social sharing -->
+    <meta property="og:title" content="" id="og-title">
+    <meta property="og:description" content="" id="og-description">
+    <meta property="og:image" content="" id="og-image">
+    <meta property="og:url" content="" id="og-url">
+    <meta property="og:type" content="article">
+    
+    <!-- Twitter Card meta tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="" id="twitter-title">
+    <meta name="twitter:description" content="" id="twitter-description">
+    <meta name="twitter:image" content="" id="twitter-image">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-text">TechnovateX</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#technologies" class="nav-link">Technologies</a>
+                <a href="news.html" class="nav-link">News</a>
+                <a href="index.html#portfolio" class="nav-link">Portfolio</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb Navigation -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="index.html">Home</a>
+                <span class="breadcrumb-separator">→</span>
+                <a href="news.html">News</a>
+                <span class="breadcrumb-separator">→</span>
+                <span class="breadcrumb-current" id="breadcrumb-title">Article</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <article class="article-page">
+        <div class="container">
+            <!-- Article Header -->
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-category" id="article-category">Technology</span>
+                    <span class="article-date" id="article-date">January 15, 2024</span>
+                    <span class="article-read-time" id="article-read-time">5 min read</span>
+                </div>
+                <h1 class="article-title-main" id="article-title-main">Loading Article...</h1>
+                <p class="article-excerpt" id="article-excerpt">Article excerpt will appear here...</p>
+                
+                <div class="article-author-info">
+                    <div class="author-avatar">👤</div>
+                    <div class="author-details">
+                        <span class="author-name" id="article-author">Author Name</span>
+                        <span class="author-date" id="article-publish-date">Published on January 15, 2024</span>
+                    </div>
+                </div>
+                
+                <div class="article-actions">
+                    <div class="share-buttons">
+                        <span class="share-label">Share:</span>
+                        <button class="share-btn" onclick="shareArticle('twitter')" title="Share on Twitter">
+                            <span class="share-icon">🐦</span> Twitter
+                        </button>
+                        <button class="share-btn" onclick="shareArticle('linkedin')" title="Share on LinkedIn">
+                            <span class="share-icon">💼</span> LinkedIn
+                        </button>
+                        <button class="share-btn" onclick="shareArticle('copy')" title="Copy Link">
+                            <span class="share-icon">🔗</span> Copy Link
+                        </button>
+                    </div>
+                    <div class="article-stats">
+                        <span class="view-count" id="article-views">👁️ 1,234 views</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Article Content -->
+            <div class="article-content-wrapper">
+                <div class="article-main">
+                    <!-- Article Hero Image -->
+                    <div class="article-hero" id="article-hero">
+                        <div class="article-hero-placeholder">🚀</div>
+                    </div>
+
+                    <!-- Article Body -->
+                    <div class="article-content" id="article-content">
+                        <div class="loading-article">
+                            <div class="loading-spinner"></div>
+                            <p>Loading article content...</p>
+                        </div>
+                    </div>
+
+                    <!-- Article Tags -->
+                    <div class="article-tags" id="article-tags">
+                        <!-- Tags will be populated dynamically -->
+                    </div>
+
+                    <!-- Article Navigation -->
+                    <nav class="article-navigation" id="article-navigation">
+                        <!-- Previous/Next articles will be populated dynamically -->
+                    </nav>
+                </div>
+
+                <!-- Article Sidebar -->
+                <aside class="article-sidebar">
+                    <!-- Table of Contents -->
+                    <div class="sidebar-section toc-section" id="toc-section" style="display: none;">
+                        <h3>Table of Contents</h3>
+                        <nav class="table-of-contents" id="table-of-contents">
+                            <!-- TOC will be generated automatically -->
+                        </nav>
+                    </div>
+
+                    <!-- Related Articles -->
+                    <div class="sidebar-section">
+                        <h3>Related Articles</h3>
+                        <div class="related-articles" id="related-articles">
+                            <!-- Related articles will be populated dynamically -->
+                        </div>
+                    </div>
+
+                    <!-- Newsletter Signup -->
+                    <div class="sidebar-section newsletter-signup">
+                        <h3>Stay Updated</h3>
+                        <p>Get the latest technology insights delivered to your inbox.</p>
+                        <form class="sidebar-newsletter-form" id="sidebar-newsletter-form">
+                            <input type="email" placeholder="Your email" required>
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                        </form>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </article>
+
+    <!-- Comments Section (Optional) -->
+    <section class="comments-section" style="display: none;">
+        <div class="container">
+            <h3>Comments</h3>
+            <div class="comments-placeholder">
+                <p>Comments functionality would be integrated here with a service like Disqus or a custom solution.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h3>Never Miss an Update</h3>
+                <p>Subscribe to our newsletter for the latest technology news and insights</p>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>TechnovateX</h4>
+                    <p>Innovating tomorrow's technology today.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">GitHub</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Solutions</h4>
+                    <a href="#">Artificial Intelligence</a>
+                    <a href="#">IoT Platforms</a>
+                    <a href="#">Quantum Computing</a>
+                    <a href="#">Cybersecurity</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <a href="index.html#about">About Us</a>
+                    <a href="index.html#portfolio">Portfolio</a>
+                    <a href="news.html">News</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <a href="#">Documentation</a>
+                    <a href="#">API Reference</a>
+                    <a href="#">Support</a>
+                    <a href="#">Blog</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechnovateX. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Article Page Specific Styles -->
+    <style>
+        /* Article Page Styles */
+        .article-page {
+            margin-top: 70px;
+            min-height: 80vh;
+        }
+
+        .breadcrumb {
+            background-color: var(--accent-color);
+            padding: var(--spacing-lg) 0;
+        }
+
+        .breadcrumb-nav {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            font-size: var(--font-size-sm);
+        }
+
+        .breadcrumb-nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .breadcrumb-separator {
+            color: var(--text-secondary);
+        }
+
+        .breadcrumb-current {
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .article-header {
+            padding: var(--spacing-2xl) 0;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+            flex-wrap: wrap;
+        }
+
+        .article-category {
+            background-color: var(--primary-light);
+            color: var(--primary-color);
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: 12px;
+            font-size: var(--font-size-sm);
+            font-weight: 500;
+        }
+
+        .article-date,
+        .article-read-time {
+            color: var(--text-secondary);
+            font-size: var(--font-size-sm);
+        }
+
+        .article-title-main {
+            font-size: var(--font-size-4xl);
+            line-height: 1.2;
+            margin-bottom: var(--spacing-lg);
+            color: var(--text-primary);
+        }
+
+        .article-excerpt {
+            font-size: var(--font-size-lg);
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: var(--spacing-xl);
+            max-width: 800px;
+        }
+
+        .article-author-info {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--font-size-xl);
+        }
+
+        .author-details {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .author-name {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .author-date {
+            font-size: var(--font-size-sm);
+            color: var(--text-secondary);
+        }
+
+        .article-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: var(--spacing-lg);
+        }
+
+        .share-buttons {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+            flex-wrap: wrap;
+        }
+
+        .share-label {
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .share-btn {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            padding: var(--spacing-sm) var(--spacing-md);
+            border: 1px solid var(--border-color);
+            background-color: var(--secondary-color);
+            color: var(--text-primary);
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: var(--font-size-sm);
+            text-decoration: none;
+        }
+
+        .share-btn:hover {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            border-color: var(--primary-color);
+        }
+
+        .article-stats {
+            color: var(--text-secondary);
+            font-size: var(--font-size-sm);
+        }
+
+        .article-content-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: var(--spacing-3xl);
+            align-items: start;
+        }
+
+        .article-main {
+            max-width: 800px;
+        }
+
+        .article-hero {
+            margin-bottom: var(--spacing-2xl);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            aspect-ratio: 16/9;
+            background: linear-gradient(135deg, var(--primary-light), var(--accent-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .article-hero-placeholder {
+            font-size: 4rem;
+        }
+
+        .article-content {
+            line-height: 1.8;
+            font-size: var(--font-size-lg);
+        }
+
+        .article-content h2 {
+            margin-top: var(--spacing-2xl);
+            margin-bottom: var(--spacing-lg);
+            color: var(--text-primary);
+            font-size: var(--font-size-2xl);
+        }
+
+        .article-content h3 {
+            margin-top: var(--spacing-xl);
+            margin-bottom: var(--spacing-md);
+            color: var(--text-primary);
+            font-size: var(--font-size-xl);
+        }
+
+        .article-content p {
+            margin-bottom: var(--spacing-lg);
+            color: var(--text-primary);
+        }
+
+        .article-content ul,
+        .article-content ol {
+            margin-bottom: var(--spacing-lg);
+            padding-left: var(--spacing-xl);
+        }
+
+        .article-content li {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .article-content blockquote {
+            border-left: 4px solid var(--primary-color);
+            padding-left: var(--spacing-lg);
+            margin: var(--spacing-xl) 0;
+            font-style: italic;
+            color: var(--text-secondary);
+            background-color: var(--accent-color);
+            padding: var(--spacing-lg);
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+
+        .loading-article {
+            text-align: center;
+            padding: var(--spacing-3xl) 0;
+        }
+
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid var(--border-color);
+            border-top: 4px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto var(--spacing-lg);
+        }
+
+        .article-tags {
+            margin-top: var(--spacing-2xl);
+            padding-top: var(--spacing-xl);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .article-tags h3 {
+            margin-bottom: var(--spacing-md);
+            color: var(--text-primary);
+            font-size: var(--font-size-lg);
+        }
+
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-sm);
+        }
+
+        .article-tag {
+            background-color: var(--primary-light);
+            color: var(--primary-color);
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: 12px;
+            font-size: var(--font-size-sm);
+            font-weight: 500;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .article-tag:hover {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+        }
+
+        .article-navigation {
+            margin-top: var(--spacing-2xl);
+            padding-top: var(--spacing-xl);
+            border-top: 1px solid var(--border-color);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-lg);
+        }
+
+        .nav-article {
+            padding: var(--spacing-lg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            color: var(--text-primary);
+            transition: var(--transition);
+        }
+
+        .nav-article:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-light);
+        }
+
+        .nav-article-label {
+            font-size: var(--font-size-sm);
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .nav-article-title {
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .article-sidebar {
+            position: sticky;
+            top: 100px;
+            max-height: calc(100vh - 120px);
+            overflow-y: auto;
+        }
+
+        .sidebar-section {
+            background-color: var(--accent-color);
+            padding: var(--spacing-xl);
+            border-radius: var(--border-radius);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .sidebar-section h3 {
+            margin-bottom: var(--spacing-lg);
+            color: var(--text-primary);
+            font-size: var(--font-size-lg);
+        }
+
+        .table-of-contents {
+            list-style: none;
+        }
+
+        .table-of-contents a {
+            display: block;
+            padding: var(--spacing-xs) 0;
+            color: var(--text-secondary);
+            text-decoration: none;
+            border-left: 2px solid transparent;
+            padding-left: var(--spacing-sm);
+            transition: var(--transition);
+            font-size: var(--font-size-sm);
+        }
+
+        .table-of-contents a:hover,
+        .table-of-contents a.active {
+            color: var(--primary-color);
+            border-left-color: var(--primary-color);
+        }
+
+        .related-articles {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+        }
+
+        .related-article {
+            padding: var(--spacing-md);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            color: var(--text-primary);
+            transition: var(--transition);
+            background-color: var(--secondary-color);
+        }
+
+        .related-article:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        .related-article-title {
+            font-weight: 600;
+            font-size: var(--font-size-sm);
+            line-height: 1.4;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .related-article-meta {
+            font-size: var(--font-size-xs);
+            color: var(--text-secondary);
+        }
+
+        .newsletter-signup p {
+            font-size: var(--font-size-sm);
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .sidebar-newsletter-form {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+        }
+
+        .sidebar-newsletter-form input {
+            padding: var(--spacing-sm);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            font-size: var(--font-size-sm);
+        }
+
+        .sidebar-newsletter-form button {
+            padding: var(--spacing-sm) var(--spacing-md);
+            font-size: var(--font-size-sm);
+        }
+
+        /* Print Styles */
+        @media print {
+            .navbar,
+            .breadcrumb,
+            .article-actions,
+            .article-sidebar,
+            .newsletter,
+            .footer {
+                display: none;
+            }
+
+            .article-page {
+                margin-top: 0;
+            }
+
+            .article-content-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .article-content {
+                font-size: 12pt;
+                line-height: 1.6;
+            }
+
+            .article-title-main {
+                font-size: 24pt;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .article-content-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .article-sidebar {
+                position: static;
+                max-height: none;
+                order: -1;
+                margin-bottom: var(--spacing-2xl);
+            }
+
+            .sidebar-section {
+                display: inline-block;
+                width: calc(50% - var(--spacing-md));
+                margin-right: var(--spacing-lg);
+                vertical-align: top;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .article-title-main {
+                font-size: var(--font-size-3xl);
+            }
+
+            .article-actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .share-buttons {
+                justify-content: center;
+            }
+
+            .article-navigation {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar-section {
+                display: block;
+                width: 100%;
+                margin-right: 0;
+            }
+
+            .article-meta {
+                gap: var(--spacing-md);
+            }
+        }
+    </style>
+
+    <script src="script.js"></script>
+    <script>
+        // Article page specific functionality
+        let currentArticle = null;
+
+        // Sample article data (would come from news.js in real implementation)
+        const sampleArticles = [
+            {
+                id: 'ai-breakthrough-2024-001',
+                title: 'Revolutionary AI Algorithm Breaks Computing Barriers',
+                excerpt: 'Our latest neural network architecture achieves unprecedented performance in complex problem solving, opening new possibilities for artificial general intelligence.',
+                content: `
+                    <h2>Introduction</h2>
+                    <p>The field of artificial intelligence has reached a pivotal moment with the development of our revolutionary neural network architecture. This breakthrough represents years of research and development, bringing us closer to achieving artificial general intelligence than ever before.</p>
+                    
+                    <h2>The Technology Behind the Breakthrough</h2>
+                    <p>Our new algorithm leverages advanced deep learning techniques combined with novel attention mechanisms that allow for more efficient processing of complex data patterns. The architecture incorporates:</p>
+                    
+                    <ul>
+                        <li>Multi-layered attention networks with dynamic weighting</li>
+                        <li>Adaptive learning rates that optimize in real-time</li>
+                        <li>Cross-modal processing capabilities for multimedia inputs</li>
+                        <li>Quantum-inspired optimization algorithms</li>
+                    </ul>
+                    
+                    <blockquote>
+                        "This represents the most significant advancement in AI architecture since the introduction of transformer models. The implications for both research and practical applications are enormous." - Dr. Sarah Chen, Lead AI Researcher
+                    </blockquote>
+                    
+                    <h2>Performance Metrics and Results</h2>
+                    <p>The new algorithm has demonstrated remarkable performance across multiple benchmarks:</p>
+                    
+                    <ul>
+                        <li>98.7% accuracy on complex reasoning tasks</li>
+                        <li>340% improvement in processing speed over previous models</li>
+                        <li>65% reduction in computational resource requirements</li>
+                        <li>Successfully solved problems previously considered intractable</li>
+                    </ul>
+                    
+                    <h3>Real-World Applications</h3>
+                    <p>The practical applications of this technology are vast and transformative. We're already seeing successful implementations in:</p>
+                    
+                    <ul>
+                        <li>Medical diagnostics with unprecedented accuracy</li>
+                        <li>Financial market prediction and risk assessment</li>
+                        <li>Climate modeling and environmental research</li>
+                        <li>Autonomous systems and robotics</li>
+                    </ul>
+                    
+                    <h2>Future Implications</h2>
+                    <p>This breakthrough opens doors to possibilities we've only dreamed of. As we continue to refine and optimize this technology, we anticipate even more remarkable achievements in the coming months.</p>
+                    
+                    <p>The journey toward artificial general intelligence is complex and challenging, but with innovations like this, we're making significant strides forward. The future of AI is not just about processing data—it's about understanding, reasoning, and creating in ways that truly complement human intelligence.</p>
+                `,
+                category: 'ai-innovation',
+                date: '2024-01-15T10:30:00Z',
+                author: 'Dr. Sarah Chen',
+                readTime: 5,
+                image: '🧠',
+                tags: ['AI', 'Machine Learning', 'Neural Networks', 'Research'],
+                featured: true,
+                views: 2847
+            }
+        ];
+
+        // Initialize article page
+        document.addEventListener('DOMContentLoaded', function() {
+            loadArticle();
+            initializeNavigation();
+            initializeNewsletter();
+        });
+
+        function loadArticle() {
+            // Get article ID from URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const articleId = urlParams.get('id');
+
+            if (!articleId) {
+                showArticleNotFound();
+                return;
+            }
+
+            // Find article (in real app, this would be an API call)
+            currentArticle = sampleArticles.find(article => article.id === articleId);
+
+            if (!currentArticle) {
+                showArticleNotFound();
+                return;
+            }
+
+            // Populate article content
+            populateArticle(currentArticle);
+            generateTableOfContents();
+            loadRelatedArticles();
+            updateMetaTags();
+        }
+
+        function showArticleNotFound() {
+            document.getElementById('article-content').innerHTML = `
+                <div style="text-align: center; padding: 2rem;">
+                    <h2>Article Not Found</h2>
+                    <p>The article you're looking for doesn't exist or has been moved.</p>
+                    <a href="news.html" class="btn btn-primary">Back to News</a>
+                </div>
+            `;
+        }
+
+        function populateArticle(article) {
+            // Update title and meta information
+            document.getElementById('article-title').textContent = article.title + ' - TechnovateX';
+            document.getElementById('breadcrumb-title').textContent = article.title.substring(0, 50) + '...';
+            document.getElementById('article-category').textContent = getCategoryDisplayName(article.category);
+            document.getElementById('article-date').textContent = formatDate(article.date);
+            document.getElementById('article-read-time').textContent = `${article.readTime} min read`;
+            document.getElementById('article-title-main').textContent = article.title;
+            document.getElementById('article-excerpt').textContent = article.excerpt;
+            document.getElementById('article-author').textContent = article.author;
+            document.getElementById('article-publish-date').textContent = `Published on ${formatDate(article.date)}`;
+            document.getElementById('article-views').textContent = `👁️ ${formatNumber(article.views)} views`;
+
+            // Update hero image
+            document.getElementById('article-hero').innerHTML = `
+                <div class="article-hero-placeholder">${article.image}</div>
+            `;
+
+            // Update content
+            document.getElementById('article-content').innerHTML = article.content;
+
+            // Update tags
+            const tagsContainer = document.getElementById('article-tags');
+            if (article.tags && article.tags.length > 0) {
+                tagsContainer.innerHTML = `
+                    <h3>Tags</h3>
+                    <div class="tag-list">
+                        ${article.tags.map(tag => `<a href="news.html?search=${encodeURIComponent(tag)}" class="article-tag">${tag}</a>`).join('')}
+                    </div>
+                `;
+            }
+
+            // Generate navigation (simplified for demo)
+            generateArticleNavigation();
+        }
+
+        function generateTableOfContents() {
+            const tocContainer = document.getElementById('table-of-contents');
+            const tocSection = document.getElementById('toc-section');
+            const headings = document.querySelectorAll('.article-content h2, .article-content h3');
+
+            if (headings.length === 0) {
+                tocSection.style.display = 'none';
+                return;
+            }
+
+            tocSection.style.display = 'block';
+
+            const tocItems = Array.from(headings).map((heading, index) => {
+                const id = `heading-${index}`;
+                heading.id = id;
+                return `<a href="#${id}" class="toc-link">${heading.textContent}</a>`;
+            });
+
+            tocContainer.innerHTML = tocItems.join('');
+
+            // Add smooth scroll behavior for TOC links
+            document.querySelectorAll('.toc-link').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+        }
+
+        function loadRelatedArticles() {
+            const relatedContainer = document.getElementById('related-articles');
+            
+            // Generate some related articles (simplified for demo)
+            const relatedArticles = [
+                {
+                    title: 'AI Ethics in Modern Technology',
+                    category: 'AI Innovation',
+                    date: '2024-01-10'
+                },
+                {
+                    title: 'Machine Learning Best Practices',
+                    category: 'AI Innovation', 
+                    date: '2024-01-08'
+                },
+                {
+                    title: 'Future of Neural Networks',
+                    category: 'AI Innovation',
+                    date: '2024-01-05'
+                }
+            ];
+
+            relatedContainer.innerHTML = relatedArticles.map(article => `
+                <a href="#" class="related-article">
+                    <div class="related-article-title">${article.title}</div>
+                    <div class="related-article-meta">${article.category} • ${formatDate(article.date)}</div>
+                </a>
+            `).join('');
+        }
+
+        function generateArticleNavigation() {
+            const navContainer = document.getElementById('article-navigation');
+            
+            // Simplified navigation (in real app, would get actual prev/next articles)
+            navContainer.innerHTML = `
+                <a href="news.html" class="nav-article">
+                    <div class="nav-article-label">← Back to</div>
+                    <div class="nav-article-title">All News Articles</div>
+                </a>
+                <a href="#" class="nav-article">
+                    <div class="nav-article-label">Next Article →</div>
+                    <div class="nav-article-title">IoT Solutions for Smart Cities</div>
+                </a>
+            `;
+        }
+
+        function updateMetaTags() {
+            if (!currentArticle) return;
+
+            const baseUrl = window.location.origin;
+            const articleUrl = `${baseUrl}/news-article.html?id=${currentArticle.id}`;
+
+            // Update Open Graph tags
+            document.getElementById('og-title').setAttribute('content', currentArticle.title);
+            document.getElementById('og-description').setAttribute('content', currentArticle.excerpt);
+            document.getElementById('og-url').setAttribute('content', articleUrl);
+
+            // Update Twitter Card tags
+            document.getElementById('twitter-title').setAttribute('content', currentArticle.title);
+            document.getElementById('twitter-description').setAttribute('content', currentArticle.excerpt);
+
+            // Update meta description
+            document.querySelector('meta[name="description"]').setAttribute('content', currentArticle.excerpt);
+        }
+
+        function shareArticle(platform) {
+            if (!currentArticle) return;
+
+            const url = window.location.href;
+            const text = `Check out this article: ${currentArticle.title}`;
+
+            switch (platform) {
+                case 'twitter':
+                    window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
+                    break;
+                case 'linkedin':
+                    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank');
+                    break;
+                case 'copy':
+                    navigator.clipboard.writeText(url).then(() => {
+                        showNotification('Link copied to clipboard!', 'success');
+                    }).catch(() => {
+                        showNotification('Failed to copy link', 'error');
+                    });
+                    break;
+            }
+        }
+
+        function initializeNavigation() {
+            // Mobile menu functionality (reused from main script)
+            const navToggle = document.getElementById('nav-toggle');
+            const navMenu = document.getElementById('nav-menu');
+            
+            if (navToggle && navMenu) {
+                navToggle.addEventListener('click', function() {
+                    navMenu.classList.toggle('active');
+                    navToggle.classList.toggle('active');
+                });
+            }
+        }
+
+        function initializeNewsletter() {
+            const newsletterForms = document.querySelectorAll('#newsletter-form, #sidebar-newsletter-form');
+            
+            newsletterForms.forEach(form => {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const emailInput = this.querySelector('input[type="email"]');
+                    const submitButton = this.querySelector('button[type="submit"]');
+                    const email = emailInput.value;
+                    
+                    if (!isValidEmail(email)) {
+                        showNotification('Please enter a valid email address', 'error');
+                        return;
+                    }
+                    
+                    const originalText = submitButton.textContent;
+                    submitButton.innerHTML = '<span class="loading"></span> Subscribing...';
+                    submitButton.disabled = true;
+                    
+                    setTimeout(() => {
+                        showNotification('Successfully subscribed to our newsletter!', 'success');
+                        emailInput.value = '';
+                        submitButton.textContent = originalText;
+                        submitButton.disabled = false;
+                    }, 1500);
+                });
+            });
+        }
+
+        // Utility functions
+        function getCategoryDisplayName(category) {
+            const categoryNames = {
+                'ai-innovation': 'AI Innovation',
+                'iot-solutions': 'IoT Solutions',
+                'robotics': 'Robotics',
+                'quantum-computing': 'Quantum Computing',
+                'mobile-innovation': 'Mobile Innovation',
+                'cybersecurity': 'Cybersecurity'
+            };
+            return categoryNames[category] || category;
+        }
+
+        function formatDate(dateString) {
+            const options = { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric'
+            };
+            return new Date(dateString).toLocaleDateString('en-US', options);
+        }
+
+        function formatNumber(num) {
+            if (num >= 1000000) {
+                return Math.floor(num / 1000000) + 'M';
+            } else if (num >= 1000) {
+                return Math.floor(num / 1000) + 'K';
+            }
+            return num.toString();
+        }
+
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        function showNotification(message, type = 'info') {
+            // Reuse notification function from main script
+            const existingNotification = document.querySelector('.notification');
+            if (existingNotification) {
+                existingNotification.remove();
+            }
+            
+            const notification = document.createElement('div');
+            notification.className = `notification notification-${type}`;
+            notification.innerHTML = `
+                <span>${message}</span>
+                <button class="notification-close" onclick="this.parentElement.remove()">×</button>
+            `;
+            
+            const styles = `
+                .notification {
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    padding: 1rem 1.5rem;
+                    border-radius: 8px;
+                    color: white;
+                    font-weight: 500;
+                    z-index: 10000;
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    animation: slideIn 0.3s ease-out;
+                    max-width: 400px;
+                    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+                }
+                
+                .notification-success { background-color: #28a745; }
+                .notification-error { background-color: #dc3545; }
+                .notification-info { background-color: #17a2b8; }
+                
+                .notification-close {
+                    background: none;
+                    border: none;
+                    color: white;
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                    padding: 0;
+                    margin-left: auto;
+                }
+                
+                @keyframes slideIn {
+                    from { transform: translateX(100%); opacity: 0; }
+                    to { transform: translateX(0); opacity: 1; }
+                }
+            `;
+            
+            if (!document.querySelector('#notification-styles')) {
+                const styleSheet = document.createElement('style');
+                styleSheet.id = 'notification-styles';
+                styleSheet.textContent = styles;
+                document.head.appendChild(styleSheet);
+            }
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                if (notification.parentElement) {
+                    notification.style.animation = 'slideIn 0.3s ease-out reverse';
+                    setTimeout(() => notification.remove(), 300);
+                }
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
